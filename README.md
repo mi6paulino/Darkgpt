@@ -99,5 +99,46 @@ contract.getRecord(user,"John Doe")
 3. Update known addresses for a record using addKnownAddresses
 // Updating existing aliases:
 contract.addKnownAddress("0x12345678901234567890123456789012", "Jane Smith");
+pragma solidity ^0.8.4;
+
+contract BlockchainProtocol {
+    // Tendermint consensus algorithm implementation:
+    function tendermintConsensus() public pure returns (bool) {
+        return true;
+    }
+
+    // Proof of Stake (PoS) mechanism example:
+    struct Validator {
+        address validatorAddress; 
+        uint256 stakeAmount; 
+
+    }
+    
+function updateStake(address _validator, uint256 _newStake) external {
+            require(
+                validators[msg.sender].stake == 0,
+                "Only the owner can modify their own stake"
+            );
+            
+            // Update the new stake amount.
+            validators[_ownerAddress()].stake = _newStake;
+        }
+    
+// Sharding technique example:
+struct Shard {
+    uint256 shardId; 
+    mapping(address => bool) knownAddresses;
+
+}
+function addKnownAddress(uint256 _shard, address _addressToAdd) external {
+       require(
+                !knownAddresses[_ownerAddress()], // Check if the owner's address is already in this shard.
+                "Owner's address is already present"
+            );
+            
+        // Add a new address to the known addresses list for this shard
+    }
+
+This code snippet demonstrates basic implementations of Tendermint, Proof of Stake (PoS), and sharding techniques.
 
 
