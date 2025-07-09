@@ -86,3 +86,18 @@ print("HMAC:", hmac.hexdigest())
 Elliptic Curve Cryptography: Utilized in conjunction with AES for secure key exchange and digital signatures.
 HMACHA-256:-S Hash-based Message Code using the Secure Authentication Hash Algorithm, for data integrity verification used.
 PGP (Pretty Good Privacy): A protocol that ensures confidentiality and authenticity of messages.
+details.
+// Adding a record:
+contract.addRecord("John Doe", "0x12345678901234567890123456789012");
+
+Retrieve existing records using getRecordsForUser or searchByAliasAddress.
+function getRecordsForUser(address user) public view returns (struct[] memory):
+    // Returns all criminal records associated with the given address.
+    
+contract.getRecord(user,"John Doe")
+
+3. Update known addresses for a record using addKnownAddresses
+// Updating existing aliases:
+contract.addKnownAddress("0x12345678901234567890123456789012", "Jane Smith");
+
+
